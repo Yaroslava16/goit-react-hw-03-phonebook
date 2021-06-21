@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Filter.module.css';
 
 const Filter = ({ filter, filterContacts }) => (
@@ -12,5 +13,10 @@ const Filter = ({ filter, filterContacts }) => (
     />
   </label>
 );
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  filterContacts: PropTypes.func.isRequired,
+};
 
 export default Filter;
